@@ -8,8 +8,8 @@ The app is easy to use and accessible on the web. Just go to this url and enter 
 [https://shnala.github.io/live-weather-dashboard/]
 
 ## Usage
-![Image displaying weather data for Vancouver](./assets/example1.png)
-![Image displaying how search queries are saved to history via localstorage](./assets/example2.png)
+![Image displaying weather data for Vancouver](/assets/example1.PNG)
+![Image displaying how search queries are saved to history via localstorage](/assets/example2.PNG)
 
 ## Credits
 Weather API for live weather information:
