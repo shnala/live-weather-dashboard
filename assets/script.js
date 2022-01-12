@@ -1,7 +1,6 @@
 console.log("This works")
-//TODO: Save search history.
 //TODO: Reduce redundant code via for-loop to dynamically create weather cards.
-
+//TODO: Make history clickable so user doesn't have to search for a previous inquiry.
 
 var requestUrlToday = 'http://api.openweathermap.org/data/2.5/weather?q='
 var requestUrlForecast = 'http://api.openweathermap.org/data/2.5/forecast?q='
@@ -28,14 +27,6 @@ var city = document.querySelector('.location-here')
 var searchHistoryContainer = document.querySelector('#history-container')
 var searchHistoryEl = document.querySelector('#history')
 var searchHistory = [];
-
-// function renderHistory () {
-//     for (let i = 0; i < history.length; i++) {
-//         var 
-        
-//     }
-// }
-
 
 
 function handleSearchFormSubmit(event) {
@@ -64,10 +55,9 @@ function handleSearchFormSubmit(event) {
     searchHistory.push(searchInputVal);
     localStorage.setItem("searchItems", JSON.stringify(searchHistory));
 
-//TODO: Needs debugging. Renders more list items than needed.
+
     for (let i = 0; i < searchHistory.length; i++) {
         var searchItems = searchHistory[i];
-
         var searchItem = document.createElement("li");
         searchItem.textContent = searchItems;
         searchItem.classList.add("search-item");
