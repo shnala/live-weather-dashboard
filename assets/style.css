@@ -1,0 +1,11 @@
+ul {
+    list-style-type: none;
+}
+
+#forecast {
+    display: none;
+}
+
+#history-container {
+    display: none;
+}
