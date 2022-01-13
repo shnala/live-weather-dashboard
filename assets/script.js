@@ -2,8 +2,8 @@ console.log("This works")
 //TODO: Reduce redundant code via for-loop to dynamically create weather cards.
 //TODO: Make history clickable so user doesn't have to search for a previous inquiry.
 
-var requestUrlToday = 'http://api.openweathermap.org/data/2.5/weather?q='
-var requestUrlForecast = 'http://api.openweathermap.org/data/2.5/forecast?q='
+var requestUrlToday = 'https://api.openweathermap.org/data/2.5/weather?q='
+var requestUrlForecast = 'https://api.openweathermap.org/data/2.5/forecast?q='
 var todaysWeatherEl = document.querySelector('#current-weather')
 var todaysDate = document.querySelector('#date-today')
 
@@ -78,7 +78,7 @@ function handleSearchFormSubmit(event) {
         
         city.textContent = data.name;
         var iconCode = data.weather[0].icon;
-        var iconUrl = "<img src='http://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
+        var iconUrl = "<img src='https://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
         console.log(iconUrl);
         document.querySelector('#icon-today').innerHTML = iconUrl
 
@@ -128,7 +128,7 @@ function handleSearchFormSubmit(event) {
             
             
         //     var iconCode = data.list[i].weather[0].icon;
-        //     var iconUrl = "<img src='http://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
+        //     var iconUrl = "<img src='https://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
 
         // }
 
@@ -137,7 +137,7 @@ function handleSearchFormSubmit(event) {
 
         dateOne.textContent = moment().add(1, 'days').calendar();
         var iconCode = data.list[1].weather[0].icon;
-        var iconUrl = "<img src='http://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
+        var iconUrl = "<img src='https://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
         document.querySelector('#icon-tomorrow').innerHTML = iconUrl
 
         var weatherTomorrow = document.createElement('li')
@@ -161,7 +161,7 @@ function handleSearchFormSubmit(event) {
 
         dateTwo.textContent = moment().add(2, 'days').calendar();
         var iconCode = data.list[2].weather[0].icon;
-        var iconUrl = "<img src='http://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
+        var iconUrl = "<img src='https://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
         document.querySelector('#icon-day-two').innerHTML = iconUrl
 
         var weatherTwo = document.createElement('li')
@@ -184,7 +184,7 @@ function handleSearchFormSubmit(event) {
 
         dateThree.textContent = moment().add(3, 'days').calendar();
         var iconCode = data.list[3].weather[0].icon;
-        var iconUrl = "<img src='http://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
+        var iconUrl = "<img src='https://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
         document.querySelector('#icon-day-three').innerHTML = iconUrl
 
         var weatherThree = document.createElement('li')
@@ -207,7 +207,7 @@ function handleSearchFormSubmit(event) {
 
         dateFour.textContent = moment().add(4, 'days').calendar();
         var iconCode = data.list[4].weather[0].icon;
-        var iconUrl = "<img src='http://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
+        var iconUrl = "<img src='https://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
         document.querySelector('#icon-day-four').innerHTML = iconUrl
 
         var weatherFour = document.createElement('li')
@@ -230,7 +230,7 @@ function handleSearchFormSubmit(event) {
 
         dateFive.textContent = moment().add(5, 'days').calendar();
         var iconCode = data.list[5].weather[0].icon;
-        var iconUrl = "<img src='http://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
+        var iconUrl = "<img src='https://openweathermap.org/img/w/" + iconCode + ".png' alt='Icon depicting current weather.'>";
         document.querySelector('#icon-day-five').innerHTML = iconUrl
 
         var weatherFive = document.createElement('li')
